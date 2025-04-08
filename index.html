@@ -1,127 +1,533 @@
 <!DOCTYPE html>
+
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Huyền Diệu</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
-</head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Huyền Diệu</title>
+<link href="styles.css" rel="stylesheet"/>
+<script defer="" src="script.js"></script>
+<style>body {
+    margin: 0;
+    font-family: 'Times New Roman', serif;
+    background: #fbe7eb;
+    text-align: center;
+}
+
+header {
+    background: none;
+    padding: 20px 0;
+    position: relative;
+    width: 100%;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-family: 'Verdana', sans-serif;
+    font-size: 15px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    padding-top: 20px;
+    gap: 80px;
+}
+
+.hero-text {
+    text-align: left;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+    color: black;
+    font-weight: bold;
+}
+
+.hero-text span {
+    font-weight: bold;
+    font-size: 95px;
+    color: #d09a7b;
+}
+
+.hero-image img {
+    width: 400px;
+    border-radius: 42% 42% 0 0;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+body {
+    margin: 0;
+    font-family: 'Times New Roman', serif;
+    background: #fbe7eb;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    max-width: 900px;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+}
+
+.about-image img {
+    width: 250px;
+    height: auto;
+    border-radius: 40% 40% 0 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-content {
+    margin-left: 30px;
+    text-align: left;
+}
+
+.about-content h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: black;
+}
+
+.about-content p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.decorations {
+    margin-top: 20px;
+}
+body {
+    margin: 0;
+    font-family: 'Times New Roman', serif;
+    background: #fbe7eb;
+}
+
+.projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.container {
+    max-width: 1000px;
+    background: #f2ced8;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.projects-content h2 {
+    font-size: 35px;
+    font-weight: bold;
+    color: black;
+}
+
+.projects-content p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px; /* Tăng khoảng cách giữa chữ và ảnh */
+    padding: 20px;
+}
+
+.projects-content {
+    flex: 1;
+    max-width: 50%;
+    text-align: justify;
+    margin-right: 20px; /* Tạo khoảng cách với phần ảnh */
+}
+
+.projects-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+        "small1 large"
+        "small2 large";
+    gap: 15px; /* Khoảng cách giữa ảnh */
+    max-width: 50%;
+    align-items: center;
+}
+
+.projects-images img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.projects-images img:nth-child(1) {
+    grid-area: small1;
+    height: 200px; /* Ảnh nhỏ hơn để cân đối với đoạn văn */
+}
+
+.projects-images img:nth-child(2) {
+    grid-area: large;
+    height: 450px; /* Điều chỉnh ảnh dài để không quá to */
+}
+
+.projects-images img:nth-child(3) {
+    grid-area: small2;
+    height: 200px; /* Ảnh nhỏ cùng size với ảnh đầu */
+}
+
+.projects-images img:hover {
+    transform: scale(1.05);
+}
+.projects2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.container2 {
+    max-width: 1000px;
+    background: #f2ced8;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Bố cục chính: Văn bản & Hình ảnh bên trái - Logo & Banner bên phải */
+.projects-container2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px; /* Tăng khoảng cách giữa 2 bên */
+}
+
+/* Phần bên trái: Văn bản + Hình ảnh */
+.left-content {
+    flex: 1;
+    max-width: 75%;
+}
+
+/* Văn bản */
+.projects-content2 h2 {
+    text-align: left; /* Căn trái */
+    width: 100%;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.projects-content2 p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* Hình ảnh sản phẩm */
+.projects-images2 {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.projects-images2 img.first-image {
+    width: 60%;  /* Giữ nguyên kích thước */
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.projects-images2 img {
+    width: 20%; /* Giữ nguyên kích thước hình ảnh */
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Phần bên phải: Logo + Banner */
+.right-content {
+    max-width: 25%; /* Giảm kích thước phần này để banner nhỏ lại */
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* Banner quảng cáo */
+.projects-banner img {
+    width: 90%; /* Giảm kích thước banner */
+    border-radius: 10px;
+}
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%; 
+}
+.contact-container {
+    display: flex;
+    align-items: center;
+    background: #f7f2ec;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    width: 100%; 
+    justify-content: center; 
+}
+
+/* Hình ảnh bên trái */
+.contact-image img {
+    width: 300px;
+    height: auto;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+/* Phần nội dung bên phải */
+.contact-info {
+    flex: 1;
+    padding-left: 30px;
+}
+
+/* Tiêu đề */
+.contact-info h2 {
+    font-size: 60px;
+    color: #b08563;
+    margin-bottom: 15px;
+}
+
+.contact-button {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none; /* Xóa gạch chân của thẻ <a> */
+    color: black; /* Đảm bảo chữ có màu sắc rõ ràng */
+    font-weight: bold;
+}
+
+/* Khi di chuột vào nút */
+.contact-button:hover {
+    transform: translateY(-3px);
+}
+
+/* Hình ảnh trong nút */
+.contact-button img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+/* Định dạng chữ trong nút */
+.contact-button span {
+    font-weight: bold;
+    color: black; /* Đảm bảo chữ không bị mất màu */
+}
+/* Thông tin liên hệ */
+.contact-details {
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.contact-details p {
+    margin: 5px 0;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-details span {
+    font-weight: bold;
+    color: #b08563;
+}
+html {
+    scroll-behavior: smooth;
+}</style></head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#about">GIỚI THIỆU</a></li>
-                <li><a href="#projects">DỰ ÁN</a></li>
-                <li><a href="#contact">LIÊN HỆ</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section class="hero">
-        <div class="hero-text">
-            <h1 class="fade-in">Xin chào! Mình là... <br><span>Huyền Diệu</span></h1>
-        </div>
-        <div class="hero-image">
-            <img src="img/z6431723438446_b6a7c6e73643f35ad1ccdce13e0a0118.jpg" alt="Huyền Diệu">
-        </div>
-    </section>
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-image">
-                <img src="img/huyen dieu.jpg" alt="Huyền Diệu">
-            </div>
-            <div class="about-content">
-                <h2>Giới thiệu</h2>
-                <p>Xin chào! Mình là <strong>Hoàng Thị Huyền Diệu</strong> và mình đến từ Yên Bái. Hiện tại, mình đang là sinh viên ngành Thương mại điện tử tại Trường Đại học Công nghệ Thông tin và Truyền thông (ICTU).</p>
-                <p>Với niềm đam mê về công nghệ và kinh doanh, mình luôn tìm kiếm cơ hội để áp dụng các giải pháp số vào lĩnh vực thương mại, giúp tối ưu hóa quy trình và mang lại giá trị thực tiễn.</p>
-                <p>Trên website cá nhân này, mình sẽ chia sẻ những kiến thức, trải nghiệm học tập cũng như các dự án mà mình đã thực hiện trong quá trình theo đuổi ngành Thương mại điện tử.</p>
-                <p>Hãy kết nối với mình để cùng nhau trao đổi và học tập nhé! 🚀</p>
-                <div class="decorations">
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="projects" class="projects">
-        <div class="container">
-            <div class="projects-content">
-                <h2>Dự án gần đây</h2>
-                <p>
+<header>
+<nav>
+<ul>
+<li><a href="#home">TRANG CHỦ</a></li>
+<li><a href="#about">GIỚI THIỆU</a></li>
+<li><a href="#projects">DỰ ÁN</a></li>
+<li><a href="#contact">LIÊN HỆ</a></li>
+</ul>
+</nav>
+</header>
+<section class="hero" id="home">
+<div class="hero-text">
+<h1 class="fade-in">Xin chào! Mình là... <br/><span>Huyền Diệu</span></h1>
+</div>
+<div class="hero-image">
+<img alt="Huyền Diệu" src="img/z6431723438446_b6a7c6e73643f35ad1ccdce13e0a0118.jpg"/>
+</div>
+</section>
+<section class="about" id="about">
+<div class="container">
+<div class="about-image">
+<img alt="Huyền Diệu" src="img/huyen dieu.jpg"/>
+</div>
+<div class="about-content">
+<h2>Giới thiệu</h2>
+<p>Xin chào! Mình là <strong>Hoàng Thị Huyền Diệu</strong> và mình đến từ Yên Bái. Hiện tại, mình đang là sinh viên ngành Thương mại điện tử tại Trường Đại học Công nghệ Thông tin và Truyền thông (ICTU).</p>
+<p>Với niềm đam mê về công nghệ và kinh doanh, mình luôn tìm kiếm cơ hội để áp dụng các giải pháp số vào lĩnh vực thương mại, giúp tối ưu hóa quy trình và mang lại giá trị thực tiễn.</p>
+<p>Trên website cá nhân này, mình sẽ chia sẻ những kiến thức, trải nghiệm học tập cũng như các dự án mà mình đã thực hiện trong quá trình theo đuổi ngành Thương mại điện tử.</p>
+<p>Hãy kết nối với mình để cùng nhau trao đổi và học tập nhé! 🚀</p>
+<div class="decorations">
+</div>
+</div>
+</div>
+</section>
+<section class="projects" id="projects">
+<div class="container">
+<div class="projects-content">
+<h2>Dự án gần đây</h2>
+<p>
                     Trong năm học, mình và nhóm bạn đã có cơ hội tham gia <strong>Cuộc thi Sinh viên Kinh doanh số 2024</strong> do khoa <strong>Kinh tế và Quản trị</strong> tổ chức với dự án <strong>Về Nhà An Toàn</strong> – một ứng dụng kết nối tài xế lái xe chuyên nghiệp, giúp khách hàng trở về nhà an toàn sau khi sử dụng rượu bia.
                 </p>
-                <p>
+<p>
                     Xuất phát từ mong muốn giảm thiểu tai nạn giao thông và nâng cao ý thức lái xe có trách nhiệm, dự án đã nhận được sự đánh giá cao nhờ tính thực tiễn và tiềm năng phát triển. Vượt qua nhiều ý tưởng sáng tạo khác, <strong>Về Nhà An Toàn</strong> đã xuất sắc giành <strong>giải Nhất</strong>. Thành công này không chỉ khẳng định những tiến của ý tưởng mà còn mở ra cơ hội để phát triển ứng dụng này trong thực tế. 🚗💙
                 </p>
-            </div>
-            <div class="projects-images">
-                <img src="img/z6431816378009_d49b275bd5f74e2cfb6f1ec3e685ade7.jpg" alt="Giấy chứng nhận">
-                <img src="img/z6431816377007_8d3c4010cb155c0bfb7bcad27256fc37.jpg" alt="nhóm thực hiện">
-                <img src="img/gettyimages-517167771-2048x2048.jpg" alt="ảnh minh hoạ">
-            </div>
-        </div>
-    </section>
-    <div class="projects2">
-        <div class="container2">
-            <div class="projects-container2">
-                <div class="left-content">
-                    <div class="projects-content2">
-                        <h2>🍃 Tiệm Len Handmade Knitty Kitty – Những Món Quà Đong Đầy Yêu Thương 🍃</h2>
-                        <p>
+</div>
+<div class="projects-images">
+<img alt="Giấy chứng nhận" src="img/z6431816378009_d49b275bd5f74e2cfb6f1ec3e685ade7.jpg"/>
+<img alt="nhóm thực hiện" src="img/z6431816377007_8d3c4010cb155c0bfb7bcad27256fc37.jpg"/>
+<img alt="ảnh minh hoạ" src="img/gettyimages-517167771-2048x2048.jpg"/>
+</div>
+</div>
+</section>
+<div class="projects2">
+<div class="container2">
+<div class="projects-container2">
+<div class="left-content">
+<div class="projects-content2">
+<h2>🍃 Tiệm Len Handmade Knitty Kitty – Những Món Quà Đong Đầy Yêu Thương 🍃</h2>
+<p>
                             Xuất phát từ niềm đam mê với nghệ thuật đan móc và mong muốn mang đến những món quà ý nghĩa, 
                             chúng mình đã ấp ủ ý tưởng xây dựng một tiệm len handmade, nơi hội tụ những sản phẩm thủ công 
                             được tạo nên từ sự sáng tạo và tâm huyết.
                         </p>
-                    </div>
-                    <div class="projects-images2">
-                        <img src="img/ins.png" class="first-image">
-                        <img src="img/z6436473841384_32da83c06e1dcb05a60b01f646a3f178.jpg" alt="Sản phẩm 2">
-                        <img src="img/z6436481033449_0241b493dd3d16d10f23641b1baca966.jpg" alt="Sản phẩm 3">
-                    </div>
-                </div>
+</div>
+<div class="projects-images2">
+<img class="first-image" src="img/ins.png"/>
+<img alt="Sản phẩm 2" src="img/z6436473841384_32da83c06e1dcb05a60b01f646a3f178.jpg"/>
+<img alt="Sản phẩm 3" src="img/z6436481033449_0241b493dd3d16d10f23641b1baca966.jpg"/>
+</div>
+</div>
+<!-- Logo + Banner quảng cáo -->
+<div class="right-content">
+<div class="projects-banner">
+<img alt="Black Friday Sale" src="img/black friday.png"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<section class="contact-section" id="contact">
+<div class="contact-section">
+<div class="contact-container">
+<!-- Hình ảnh bên trái -->
+<div class="contact-image">
+<img alt="Hình ảnh cá nhân" src="img/z6436748797069_28bf0cdf9b7a623ee46a525fb2d2cb7c.jpg"/>
+</div>
+<!-- Nội dung liên hệ bên phải -->
+<div class="contact-info">
+<h2>Liên hệ</h2>
+<a class="contact-button" href="https://www.facebook.com/huyen.dieu.583093" target="_blank">
+<img alt="Facebook" src="img/logofb.jpg"/>
+<span>FACEBOOK</span>
+</a>
+<!-- Nút Instagram -->
+<a class="contact-button" href="https://www.instagram.com/hyuenndieew/" target="_blank">
+<img alt="Instagram" src="img/logouig.jpg"/>
+<span>INSTAGRAM</span>
+</a>
+<!-- Thông tin liên hệ -->
+<div class="contact-details">
+<p><span>PHONE</span> 0365652627</p>
+<p><span>EMAIL</span> Dieuunamm204@gmail.com</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const heroText = document.querySelector(".fade-in");
     
-                <!-- Logo + Banner quảng cáo -->
-                <div class="right-content">
-        
-                    <div class="projects-banner">
-                        <img src="img/black friday.png" alt="Black Friday Sale">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </section>
-    <section id="contact" class="contact-section">
-        <div class="contact-section">
-        <div class="contact-container">
-            <!-- Hình ảnh bên trái -->
-            <div class="contact-image">
-                <img src="img/z6436748797069_28bf0cdf9b7a623ee46a525fb2d2cb7c.jpg" alt="Hình ảnh cá nhân">
-            </div>
-        
-            <!-- Nội dung liên hệ bên phải -->
-            <div class="contact-info">
-                <h2>Liên hệ</h2>
-                
-                <a href="https://www.facebook.com/huyen.dieu.583093" target="_blank" class="contact-button">
-                    <img src="img/logofb.jpg" alt="Facebook">
-                    <span>FACEBOOK</span>
-                </a>
-    
-                <!-- Nút Instagram -->
-                <a href="https://www.instagram.com/hyuenndieew/" target="_blank" class="contact-button">
-                    <img src="img/logouig.jpg" alt="Instagram">
-                    <span>INSTAGRAM</span>
-                </a>
-        
-                <!-- Thông tin liên hệ -->
-                <div class="contact-details">
-                    <p><span>PHONE</span> 0365652627</p>
-                    <p><span>EMAIL</span> Dieuunamm204@gmail.com</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    </section>
+    if (heroText) {
+        heroText.style.opacity = "0";
+        heroText.style.transform = "translateY(20px)";
+
+        setTimeout(() => {
+            heroText.style.transition = "opacity 1s ease-out, transform 1s ease-out";
+            heroText.style.opacity = "1";
+            heroText.style.transform = "translateY(0)";
+        }, 500);
+    }
+});
+</script>
 </body>
 </html>
