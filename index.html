@@ -5,9 +5,8 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Huyền Diệu</title>
-<link href="styles.css" rel="stylesheet"/>
-<script defer="" src="script.js"></script>
-<style>body {
+<style>
+body {
     margin: 0;
     font-family: 'Times New Roman', serif;
     background: #fbe7eb;
@@ -15,41 +14,55 @@
 }
 
 header {
-    background: none;
     padding: 20px 0;
-    position: relative;
     width: 100%;
-    font-family: 'Georgia', serif;
-    font-weight: bold;
 }
 
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 20px 40px;
+    width: 100%;
+}
+
+/* Logo */
+.logo {
+    position: absolute;
+    left: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+/* Menu */
 nav ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
-    justify-content: center;
-    gap: 30px;
-    font-family: 'Verdana', sans-serif;
-    font-size: 15px;
-}
-
-nav ul li {
-    display: inline;
+    gap: 40px;
+    align-items: center;
 }
 
 nav ul li a {
     text-decoration: none;
     color: black;
     font-weight: bold;
+    font-size: 17px;
     transition: 0.3s;
-    text-transform: uppercase;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    color: #d09a7b;
 }
-
 .hero {
     display: flex;
     align-items: center;
@@ -96,11 +109,6 @@ nav ul li a:hover {
         transform: translateY(0);
     }
 }
-body {
-    margin: 0;
-    font-family: 'Times New Roman', serif;
-    background: #fbe7eb;
-}
 
 .about {
     display: flex;
@@ -144,11 +152,6 @@ body {
 
 .decorations {
     margin-top: 20px;
-}
-body {
-    margin: 0;
-    font-family: 'Times New Roman', serif;
-    background: #fbe7eb;
 }
 
 .projects {
@@ -403,61 +406,8 @@ body {
 }
 html {
     scroll-behavior: smooth;}
-
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    padding: 20px 40px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-/* Logo bên trái */
-.logo {
-    position: absolute;
-    left: 40px;
-    display: flex;
-    align-items: center;
-}
-
-/* Logo to hơn */
-.logo img {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid white;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-}
-
-/* Menu ở giữa */
-nav ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-/* Chữ menu */
-nav ul li a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    font-size: 17px;
-    transition: 0.3s;
-}
-
-nav ul li a:hover {
-    color: #d09a7b;
-}
-/* ================= MOBILE ================= */
 @media screen and (max-width: 768px) {
-    .header-container {
+.header-container {
         flex-direction: column;
         gap: 15px;
         padding: 20px;
@@ -475,18 +425,19 @@ nav ul li a:hover {
     nav ul {
         gap: 15px;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     nav ul li a {
         font-size: 14px;
     }
 
-    /* Hero section */
+    /* Hero */
     .hero {
         flex-direction: column;
         height: auto;
-        padding: 40px 20px;
         gap: 30px;
+        padding: 30px 20px;
     }
 
     .hero-text {
@@ -527,9 +478,13 @@ nav ul li a:hover {
     }
 
     /* Projects */
+    .projects-content {
+        max-width: 100%;
+    }
+
     .projects-images {
-        grid-template-columns: 1fr;
-        grid-template-areas: none;
+        display: flex;
+        flex-direction: column;
         max-width: 100%;
     }
 
@@ -578,7 +533,8 @@ nav ul li a:hover {
     .contact-details p {
         flex-direction: column;
         gap: 5px;
-    }}
+    }
+}
 </style></head>
 <body>
     <header>
