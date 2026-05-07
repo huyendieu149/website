@@ -455,6 +455,130 @@ nav ul li a {
 nav ul li a:hover {
     color: #d09a7b;
 }
+/* ================= MOBILE ================= */
+@media screen and (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .logo {
+        position: static;
+    }
+
+    .logo img {
+        width: 70px;
+        height: 70px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    /* Hero section */
+    .hero {
+        flex-direction: column;
+        height: auto;
+        padding: 40px 20px;
+        gap: 30px;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .hero-text span {
+        font-size: 55px;
+    }
+
+    .hero-image img {
+        width: 90%;
+        max-width: 320px;
+    }
+
+    /* About */
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .about-content {
+        margin-left: 0;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .about-content p {
+        font-size: 16px;
+    }
+
+    .about-image img {
+        width: 200px;
+    }
+
+    /* Projects */
+    .projects-images {
+        grid-template-columns: 1fr;
+        grid-template-areas: none;
+        max-width: 100%;
+    }
+
+    .projects-images img {
+        height: auto !important;
+    }
+
+    .projects-container2 {
+        flex-direction: column;
+    }
+
+    .left-content,
+    .right-content {
+        max-width: 100%;
+    }
+
+    .projects-images2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projects-images2 img,
+    .projects-images2 img.first-image {
+        width: 90%;
+    }
+
+    /* Contact */
+    .contact-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .contact-image img {
+        width: 220px;
+    }
+
+    .contact-info {
+        padding-left: 0;
+        margin-top: 20px;
+    }
+
+    .contact-info h2 {
+        font-size: 40px;
+    }
+
+    .contact-details p {
+        flex-direction: column;
+        gap: 5px;
+    }}
 </style></head>
 <body>
     <header>
